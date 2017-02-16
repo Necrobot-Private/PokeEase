@@ -40,6 +40,17 @@
                 itemRecycle: false,
                 pokemonTransfer: false,
             },
+            notificationsAudio: {
+                pokestopUsed: false,
+                pokemonCapture: false,
+                pokemonSnipe: false,
+                pokemonEvolved: false,
+                eggHatched: false,
+                incubatorStatus: false,
+                itemRecycle: false,
+                pokemonTransfer: false,
+            },
+
             notificationsJournalClearingAnimation: true
         }
     }
