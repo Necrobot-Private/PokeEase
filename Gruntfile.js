@@ -110,10 +110,22 @@ module.exports = function (grunt) {
                     // makes all src relative to cwd
                     //{expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
                     { expand: true, flatten: true, src: ['bower_components/jsoneditor/dist/img/*'], dest: '<%= buildPath %>/styles/img', filter: 'isFile' },
-                
+
                     // flattens results to a single level
                     { expand: true, flatten: true, src: ['bower_components/ion.rangeSlider/img/*'], dest: '<%= buildPath %>/img/', filter: 'isFile' },
                 ],
+            },
+            audio: {
+                files: [
+                    // includes files within path
+                    {
+                        expand: true,
+                        cwd: "src/audio/",
+                        src: ['**'],
+                        dest: '<%= buildPath %>/audio/',
+                        filter: 'isFile'
+                    }
+                ]
             }
         },
         concat: {
@@ -216,6 +228,7 @@ module.exports = function (grunt) {
         //'bower_main',
         'copy:html',
         'copy:images',
+        'copy:audio',
         'useminPrepare',
         'concat:generated',
         'cssmin:generated',
