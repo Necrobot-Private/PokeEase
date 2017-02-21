@@ -928,13 +928,18 @@ $event-incubator-status-color: #e9e1b5;
 }
 
 .inner-wrap .pokemon .iv:before {
-    content: "IV";
-    margin-right: .5em;
-    opacity: 0.5;
-}
+     content: "IV";
+     margin-right: .5em;
+     opacity: 0.5;
+ }
 
 .inner-wrap .pokemon .iv:after {
     content: "%";
+}
+.inner-wrap .pokemon .level:before {
+    content: "Level";
+    margin-right: .5em;
+    opacity: 0.5;
 }
 
 #content-wrap {
@@ -1367,6 +1372,9 @@ $event-incubator-status-color: #e9e1b5;
     }
     .poke-cp:before {
         content: "CP";
+    }
+    .poke-level:before {
+        content: "Level";
     }
     .parameter:before {
         content: "Parameter";
