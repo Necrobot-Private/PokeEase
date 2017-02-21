@@ -1189,13 +1189,13 @@ $event-incubator-status-color: #e9e1b5;
     width: calc(100% - 100px);
     height: calc(100% - 136px);
 } */
-
-.vertical-align-helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+@media all and (min-width:721px) {
+    .vertical-align-helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
 }
-
 #content-wrap.blurred {
     -webkit-filter: blur(5px);
     opacity: 0.2;
