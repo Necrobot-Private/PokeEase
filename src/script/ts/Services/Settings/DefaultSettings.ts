@@ -40,7 +40,7 @@
                 itemRecycle: false,
                 pokemonTransfer: false,
             },
-            notificationsAudio: {
+			notificationsAudio: {
                 pokestopUsed: false,
                 pokemonCapture: false,
                 pokemonSnipe: false,
@@ -50,7 +50,6 @@
                 itemRecycle: false,
                 pokemonTransfer: false,
             },
-
             notificationsJournalClearingAnimation: true
         }
     }
