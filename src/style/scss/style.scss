@@ -928,13 +928,18 @@ $event-incubator-status-color: #e9e1b5;
 }
 
 .inner-wrap .pokemon .iv:before {
-    content: "IV";
-    margin-right: .5em;
-    opacity: 0.5;
-}
+     content: "IV";
+     margin-right: .5em;
+     opacity: 0.5;
+ }
 
 .inner-wrap .pokemon .iv:after {
     content: "%";
+}
+.inner-wrap .pokemon .level:before {
+    content: "Level";
+    margin-right: .5em;
+    opacity: 0.5;
 }
 
 #content-wrap {
@@ -1062,7 +1067,7 @@ $event-incubator-status-color: #e9e1b5;
 #profile.hidden {
     transform: translateY(100%);
     -webkit-transform: translateY(100%);
-    top: -240px;
+    top: -300px;
 }
 
 .open-profile.hidden .hide {
@@ -1184,13 +1189,13 @@ $event-incubator-status-color: #e9e1b5;
     width: calc(100% - 100px);
     height: calc(100% - 136px);
 } */
-
-.vertical-align-helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+@media all and (min-width:721px) {
+    .vertical-align-helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
 }
-
 #content-wrap.blurred {
     -webkit-filter: blur(5px);
     opacity: 0.2;
@@ -1367,6 +1372,9 @@ $event-incubator-status-color: #e9e1b5;
     }
     .poke-cp:before {
         content: "CP";
+    }
+    .poke-level:before {
+        content: "Level";
     }
     .parameter:before {
         content: "Parameter";

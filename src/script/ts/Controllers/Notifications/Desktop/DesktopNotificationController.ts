@@ -84,7 +84,8 @@ class DesktopNotificationController implements INotificationController {
         this.addNotification(eventType, {
             body: `${pokemonName}
 CP: ${pokemonCatch.Cp}
-IV: ${roundedPerfection}`,
+IV: ${roundedPerfection}
+Lvl: ${pokemonCatch.Level}`,
             icon: `images/pokemon/${pokemonCatch.Id}.png`
         });
     }

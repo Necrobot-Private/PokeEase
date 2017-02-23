@@ -1,10 +1,10 @@
 /// <reference path="../../../../index.d.ts" />
 class JournalNotificationController implements INotificationController {
-    public config: IJournalNotificationControllerConfig;
-    private notifications: INotification[];
-    private timeUpdaterInterval: number;
+    public config:IJournalNotificationControllerConfig;
+    private notifications:INotification[];
+    private timeUpdaterInterval:number;
 
-    constructor(config: IJournalNotificationControllerConfig) {
+    constructor(config:IJournalNotificationControllerConfig) {
         this.config = config;
         this.notifications = [];
         this.timeUpdaterInterval = setInterval(this.onUpdateTimerElapsed, 1000);
@@ -13,7 +13,7 @@ class JournalNotificationController implements INotificationController {
         this.config.settingsService.subscribe(this.onSettingsChanged);
     }
 
-    private clearAll = (ev: JQueryEventObject): void => {
+    private clearAll = (ev:JQueryEventObject):void => {
         const allNotificationElements = this.config.container.children(".event").get().reverse();
         var delay = 0;
         allNotificationElements.forEach(notification => {
@@ -28,13 +28,13 @@ class JournalNotificationController implements INotificationController {
         this.notifications = [];
     }
 
-    private exampleClicked = (ev: JQueryEventObject): void => {
+    private exampleClicked = (ev:JQueryEventObject):void => {
         this.addNotificationExample();
     }
-    public addPokemonUpgraded = (ev:IUpgradeEvent) : void => {
-        const data : IPokemonUpgradedData = ev;
+    public addPokemonUpgraded = (ev:IUpgradeEvent):void => {
+        const data:IPokemonUpgradedData = ev;
         data.PokemonName = this.config.translationController.translation.pokemonNames[ev.PokemonId];
-        this.addNotification(data, 
+        this.addNotification(data,
             app.templates.Notifications.Journals.PokemonUpgraded(data),
             "Upgrade");
 
@@ -52,13 +52,13 @@ class JournalNotificationController implements INotificationController {
     addNotificationExample() {
         const html = `<div class="info">Click for more</div>`;
         const extendedInfoHtml = `This is an example notification.<br/>Extended information about the event will be added here.`;
-        const dummyEvent: IEvent = {
+        const dummyEvent:IEvent = {
             Timestamp: Date.now()
         }
         this.addNotification(dummyEvent, html, "example", extendedInfoHtml);
     }
 
-    public addNotificationPokeStopUsed = (fortUsed: IFortUsedEvent): void => {
+    public addNotificationPokeStopUsed = (fortUsed:IFortUsedEvent):void => {
         if (!this.config.notificationSettings.pokestopUsed) {
             return;
         }
@@ -82,7 +82,7 @@ Gems            <span class="xp"> ${fortUsed.Gems} </span><br/>
         this.addNotification(fortUsed, html, "pokestop", extendedInfoHtml);
     }
 
-    public addNotificationPokemonCapture = (pokemonCatches: IPokemonCaptureEvent[], itemsUsedForCapture: number[]): void => {
+    public addNotificationPokemonCapture = (pokemonCatches:IPokemonCaptureEvent[], itemsUsedForCapture:number[]):void => {
         const pokemonCatch = pokemonCatches[pokemonCatches.length - 1];
         if (!pokemonCatch.IsSnipe && !this.config.notificationSettings.pokemonCapture) {
             return;
@@ -98,7 +98,7 @@ Gems            <span class="xp"> ${fortUsed.Gems} </span><br/>
                         </div>
                         <div class="info">
                             ${pokemonName}
-                            <div class="stats">CP ${pokemonCatch.Cp} | IV ${roundedPerfection}%</div>
+                            <div class="stats">CP ${pokemonCatch.Cp} | Lvl ${pokemonCatch.Level} | IV ${roundedPerfection}%</div>
                         </div>`;
         let itemsHtml = "";
         _.each(itemsUsedForCapture, i => itemsHtml += `<img src="images/items/${i}.png">`);
@@ -117,7 +117,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         this.addNotification(pokemonCatch, html, eventType, extendedInfoHtml);
     }
 
-    public addNotificationPokemonEvolved = (pokemonEvolve: IPokemonEvolveEvent): void => {
+    public addNotificationPokemonEvolved = (pokemonEvolve:IPokemonEvolveEvent):void => {
         if (!this.config.notificationSettings.pokemonEvolved) {
             return;
         }
@@ -134,7 +134,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         this.addNotification(pokemonEvolve, html, "evolve");
     }
 
-    public addNotificationEggHatched = (eggHatched: IEggHatchedEvent): void => {
+    public addNotificationEggHatched = (eggHatched:IEggHatchedEvent):void => {
         if (!this.config.notificationSettings.eggHatched) {
             return;
         }
@@ -156,7 +156,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         this.addNotification(eggHatched, html, "egg-hatched", extendedInfoHtml);
     }
 
-    public addNotificationIncubatorStatus = (incubatorStatus: IIncubatorStatusEvent): void => {
+    public addNotificationIncubatorStatus = (incubatorStatus:IIncubatorStatusEvent):void => {
         if (!this.config.notificationSettings.incubatorStatus) {
             return;
         }
@@ -172,7 +172,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         this.addNotification(incubatorStatus, html, "incubator-status");
     }
 
-    public addNotificationItemRecycle = (itemRecycle: IItemRecycleEvent): void => {
+    public addNotificationItemRecycle = (itemRecycle:IItemRecycleEvent):void => {
         if (!this.config.notificationSettings.itemRecycle) {
             return;
         }
@@ -185,17 +185,17 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
 
         this.addNotification(itemRecycle, html, "recycle");
     }
-    public addHumanSnipeReachedDestination= (): void => {
-        
+    public addHumanSnipeReachedDestination = ():void => {
+
     }
-    public addHumanWalkSnipeStart = (startEvent: IHumanWalkSnipeStartEvent): void => {
-        let data : ISnipeStartNotificationData = startEvent;
+    public addHumanWalkSnipeStart = (startEvent:IHumanWalkSnipeStartEvent):void => {
+        let data:ISnipeStartNotificationData = startEvent;
         //additional data in here.
-        this.addNotification(startEvent, 
-            app.templates.Notifications.Journals.SnipeStartNotification(data),"Snipe");
-        
+        this.addNotification(startEvent,
+            app.templates.Notifications.Journals.SnipeStartNotification(data), "Snipe");
+
     }
-    public addNotificationPokemonTransfer = (pokemonTransfer: IPokemonTransferEvent): void => {
+    public addNotificationPokemonTransfer = (pokemonTransfer:IPokemonTransferEvent):void => {
         if (!this.config.notificationSettings.pokemonTransfer) {
             return;
         }
@@ -213,7 +213,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         this.addNotification(pokemonTransfer, html, "transfer");
     }
 
-    private addNotification = (event: IEvent, innerHtml: string, eventType: string, extendedInfoHtml?: string): void => {
+    private addNotification = (event:IEvent, innerHtml:string, eventType:string, extendedInfoHtml?:string):void => {
         extendedInfoHtml = extendedInfoHtml || "";
         const eventTypeName = this.config.translationController.translation.eventTypes[eventType] || eventType;
         const dateStr = moment().format("MMMM Do YYYY, HH:mm:ss");
@@ -250,7 +250,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         this.config.notificationCounter.text(this.notifications.length);
     }
 
-    private isAtBottom = (): boolean => {
+    private isAtBottom = ():boolean => {
         const scrollTop = this.config.container.scrollTop();
         const innerHeight = this.config.container.innerHeight();
         const scrollHeight = this.config.container[0].scrollHeight;
@@ -265,12 +265,12 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         this.config.container.finish().animate(animation, 100);
     }
 
-    private toggleExtendedInfo = (ev: JQueryEventObject): void => {
-        const notificationElement =  $(ev.target).closest(".event");
+    private toggleExtendedInfo = (ev:JQueryEventObject):void => {
+        const notificationElement = $(ev.target).closest(".event");
         notificationElement.find(".extended-info").slideToggle(500, "easeOutQuint");
     }
 
-    private closeNotification = (ev: JQueryEventObject): void => {
+    private closeNotification = (ev:JQueryEventObject):void => {
         const closeButton = $(ev.target);
         const element = closeButton.closest(".event");
         element.slideUp(300, () => {
@@ -280,7 +280,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         });
     }
 
-    private onSettingsChanged = (settings: ISettings, previousSettings: ISettings): void => {
+    private onSettingsChanged = (settings:ISettings, previousSettings:ISettings):void => {
         this.config.notificationSettings = settings.notificationsJournal;
     }
 }

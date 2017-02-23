@@ -1,4 +1,4 @@
-/// <reference path="../../../../index.d.ts" />
+﻿﻿/// <reference path="../../../../index.d.ts" />
 
 class AudioNotificationController implements INotificationController {
     public config: IAudioNotificationControllerConfig;
