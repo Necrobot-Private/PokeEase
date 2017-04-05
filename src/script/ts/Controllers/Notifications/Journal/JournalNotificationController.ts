@@ -94,7 +94,7 @@ Gems            <span class="xp"> ${fortUsed.Gems} </span><br/>
         const roundedPerfection = Math.round(pokemonCatch.Perfection * 100) / 100;
         const eventType = pokemonCatch.IsSnipe ? "snipe" : "catch";
         const html = `<div class="image">
-                            <img src="images/pokemon/${pokemonCatch.Id}.png"/>
+                            <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCatch.Id}.png"/>
                         </div>
                         <div class="info">
                             ${pokemonName}
@@ -124,7 +124,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         const pokemonName = this.config.translationController.translation.pokemonNames[pokemonEvolve.Id];
 
         const html = `<div class="image">
-                          <img src="images/pokemon/${pokemonEvolve.Id}.png"/>
+                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonEvolve.Id}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}
@@ -142,7 +142,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         const roundedPerfection = Math.round(eggHatched.Perfection * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="images/pokemon/${eggHatched.PokemonId}.png"/>
+                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${eggHatched.PokemonId}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}
@@ -203,7 +203,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         const roundedPerfection = Math.round(pokemonTransfer.Perfection * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="images/pokemon/${pokemonTransfer.PokemonId}.png"/>
+                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonTransfer.PokemonId}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}
