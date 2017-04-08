@@ -57,7 +57,7 @@ class DesktopNotificationController implements INotificationController {
 CP: ${pokemonCatch.Cp}
 IV: ${roundedPerfection}
 Lvl: ${pokemonCatch.Level}`,
-            icon: `images/pokemon/${pokemonCatch.Id}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCatch.Id}.png`
         });
     }
 
@@ -68,7 +68,7 @@ Lvl: ${pokemonCatch.Level}`,
         const pokemonName = this.config.translationController.translation.pokemonNames[pokemonEvolve.Id];
         this.addNotification("Evolve", {
             body: `${pokemonName}`,
-            icon: `images/pokemon/${pokemonEvolve.Id}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonEvolve.Id}.png`
         });
     }
 
@@ -79,7 +79,7 @@ Lvl: ${pokemonCatch.Level}`,
         const pokemonName = this.config.translationController.translation.pokemonNames[pokemonTransfer.PokemonId];
         this.addNotification("Transfer", {
             body: `${pokemonName}`,
-            icon: `images/pokemon/${pokemonTransfer.PokemonId}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonTransfer.PokemonId}.png`
         });
     }
 
@@ -89,7 +89,7 @@ Lvl: ${pokemonCatch.Level}`,
         }
         this.addNotification("Recycle", {
             body: `${itemRecycle.Count} items`,
-            icon: `images/items/${itemRecycle.Id}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/${itemRecycle.Id}.png`
         });
     }
 
@@ -100,7 +100,7 @@ Lvl: ${pokemonCatch.Level}`,
         const pokemonName = this.config.translationController.translation.pokemonNames[eggHatched.PokemonId];
         this.addNotification("Hatch", {
             body: `${pokemonName}`,
-            icon: `images/pokemon/${eggHatched.PokemonId}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${eggHatched.PokemonId}.png`
         });
     }
 
@@ -111,7 +111,7 @@ Lvl: ${pokemonCatch.Level}`,
         const km = Math.round((incubatorStatus.KmToWalk - incubatorStatus.KmRemaining) * 100) / 100;
         this.addNotification("Incubator", {
             body: `${km} of ${incubatorStatus.KmToWalk}km`,
-            icon: `images/items/0.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/0.png`
         });
     }
     public addHumanWalkSnipeStart = (startEvent: IHumanWalkSnipeStartEvent): void => {

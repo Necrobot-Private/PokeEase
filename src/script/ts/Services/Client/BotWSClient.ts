@@ -45,19 +45,19 @@ class BotWSClient implements IBotClient, IRequestSender {
     }
 
     private clientOnOpen = (event: Event): void => {
-        console.log(`WebSocket connected to ${this.webSocket.url}`);
+        console.log(`WebSocket is now connected to ${this.webSocket.url}`);
         this.verifyProfileTimeout = setTimeout(this.verifyProfileSent, 5000);
     }
 
     private verifyProfileSent = (): void => {
         if (!this.profileSent) {
-            console.log("Profile event not received. Reconnecting...");
+            console.log("Profile event was not received. Reconnecting...");
             this.restart();
         }
     }
 
     private clientOnClose = (event: CloseEvent): void => {
-        console.log("WebSocket closed", event);
+        console.log("WebSocket was Closed", event);
         clearTimeout(this.verifyProfileTimeout);
         this.profileSent = false;
         if (this.running) {
