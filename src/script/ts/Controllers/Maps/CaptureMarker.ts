@@ -37,7 +37,7 @@
 		    })
 
 		    if(this.args.PokemonId !== 'undefined')
-			    i.css({'background-image': "url(https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/" + this.args.PokemonId + ".png)"});
+			    i.css({'background-image': "url(images/pokemon/" + this.args.PokemonId + ".png)"});
 
 		    i.css({
 			    'background-size': "contain",

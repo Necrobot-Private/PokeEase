@@ -163,7 +163,7 @@ $(window).ready(function() {
         currentRandomPokemon = Math.floor(Math.random() * 151) + 1;
         currentRandomCP = Math.floor(Math.random() * 3000) + 10;
         currentRandomIV = ((Math.random() * 100) + 1).toFixed(2);
-        $('.content[data-category="pokemons"]').append('<div class="pokemon"><h1 class="name">'+pokemonNames[currentRandomPokemon]+'</h1><div class="image-container"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/' +currentRandomPokemon+ '.png"/></div><h3 class="cp">'+currentRandomCP+'</h3><h3 class="iv">'+currentRandomIV+'</h3></div>');
+        $('.content[data-category="pokemons"]').append('<div class="pokemon"><h1 class="name">'+pokemonNames[currentRandomPokemon]+'</h1><div class="image-container"><img src="images/pokemon/' +currentRandomPokemon+ '.png"/></div><h3 class="cp">'+currentRandomCP+'</h3><h3 class="iv">'+currentRandomIV+'</h3></div>');
     }
     */
     //$('.content[data-category="pokemons"]').html('<i class="fa fa-circle-o-notch fa-3x fa-spin"></i>');
@@ -178,7 +178,7 @@ $(window).ready(function() {
 $(window).ready(function() {
     $('.content[data-category="pokedex"]').html('');
     for (var i = 1; i <= 151; i++) {
-        $('.content[data-category="pokedex"]').append('<div class="pokemon"><h1 class="name">'+i+'. '+pokemonNames[i]+'</h1><div class="image-container"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/' +i+ '.png"/></div><h3 class="caught">'+i+'</h3><h3 class="seen">'+i+'</h3></div>');
+        $('.content[data-category="pokedex"]').append('<div class="pokemon"><h1 class="name">'+i+'. '+pokemonNames[i]+'</h1><div class="image-container"><img src="images/pokemon/' +i+ '.png"/></div><h3 class="caught">'+i+'</h3><h3 class="seen">'+i+'</h3></div>');
     }
 
     addCircleProgress();

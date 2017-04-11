@@ -77,7 +77,7 @@
     }
 
     public onMapClick = (ev:any): void => {
-        alert('Click on the Map.....')
+        alert('click on the map.....')
     }
 
     public movePlayer = (position: IUpdatePositionEvent): void => {
@@ -131,16 +131,16 @@
         pokeStop.LMarker.setIcon(icon);
     }
     public onHumanSnipeReachedDestination(ev:IHumanWalkSnipeReachedEvent) : void {
-        alert('Not Implemented --  onHumanSnipeReachedDestination')
+        alert('not implemented --  onHumanSnipeReachedDestination')
     }
 
     public onSnipePokemonStart (snipePokemon: IHumanWalkSnipeStartEvent) : void {
-        alert('Not Implemented -- onSnipePokemonStart')
+        alert('not implement ---onSnipePokemonStart')
     }
     public onPokemonCapture(pokemonCapture: IPokemonCaptureEvent): void {
         const posArr = [pokemonCapture.Latitude, pokemonCapture.Longitude];
         const img = new Image();
-        const imgUrl = `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCapture.Id}.png`;
+        const imgUrl = `images/pokemon/${pokemonCapture.Id}.png`;
         const maxWidth = 42;
         const maxHeight = 38;
         img.onload = () => {
