@@ -676,7 +676,7 @@ class GoogleMap implements IMap {
                 const fortId = $(this).attr("data-fortId");
                 const lat = parseFloat($(this).attr("data-latitude")) ;
                 const lng = parseFloat($(this).attr("data-longitude"));
-                me.sendMoveToRequest(pstop.Latitude,pstop.Latitude, pstop.Id, infoWindow);
+                me.sendMoveToRequest(pstop.Latitude, pstop.Longitude, pstop.Id, infoWindow);
             }) 
 
         });
@@ -740,7 +740,7 @@ class GoogleMap implements IMap {
                 const fortId = $(this).attr("data-fortId");
                 const lat = parseFloat($(this).attr("data-latitude")) ;
                 const lng = parseFloat($(this).attr("data-longitude"));
-                me.sendMoveToRequest(gym.Latitude,gym.Latitude, gym.Id, infoWindow);
+                me.sendMoveToRequest(gym.Latitude, gym.Longitude, gym.Id, infoWindow);
             }) 
 
         });
