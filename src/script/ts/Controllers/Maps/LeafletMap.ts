@@ -32,7 +32,7 @@
         this.playerPath.addTo(this.map);
         this.playerMarker = L.marker([0, 0], {
             icon: new L.Icon({
-                iconUrl: "images/markers/location.png",
+                iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
                 iconSize: [50, 55],
                 iconAnchor: [25, 45]
             })
@@ -41,37 +41,37 @@
 
         this.pokeStopIcons = [];
         this.pokeStopIcons[PokeStopStatus.Normal] = new L.Icon({
-            iconUrl: "images/markers/Normal.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Normal.png",
             iconSize: [48,48]
         });
         this.pokeStopIcons[PokeStopStatus.Visited] = new L.Icon({
-            iconUrl: "images/markers/Visited.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Visited.png",
             iconSize: [48, 48]
         });
         this.pokeStopIcons[PokeStopStatus.Lure] = new L.Icon({
-            iconUrl: "images/markers/Lured.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Lured.png",
             iconSize: [48, 48]
         });
         this.pokeStopIcons[PokeStopStatus.VisitedLure] = new L.Icon({
-            iconUrl: "images/markers/VisitedLure.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/VisitedLure.png",
             iconSize: [48, 48]
         });
 
         this.gymIcons = [];
         this.gymIcons[PlayerTeam.Neutral] = new L.Icon({
-            iconUrl: "images/markers/unoccupied.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/unoccupied.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Mystic] = new L.Icon({
-            iconUrl: "images/markers/mystic.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/mystic.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Valor] = new L.Icon({
-            iconUrl: "images/markers/valor.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/valor.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Instinct] = new L.Icon({
-            iconUrl: "images/markers/instinct.png",
+            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/instinct.png",
             iconSize: [48, 48]
         });
     }
