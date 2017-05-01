@@ -37,7 +37,7 @@ class DesktopNotificationController implements INotificationController {
         }
         this.addNotification("Pokestop", {
             body: `${fortUsed.Name}`,
-            icon: `images/markers/Normal.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Normal.png`
         });
     }
 
@@ -89,7 +89,7 @@ Lvl: ${pokemonCatch.Level}`,
         }
         this.addNotification("Recycle", {
             body: `${itemRecycle.Count} items`,
-            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/${itemRecycle.Id}.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/${itemRecycle.Id}.png`
         });
     }
 
@@ -111,7 +111,7 @@ Lvl: ${pokemonCatch.Level}`,
         const km = Math.round((incubatorStatus.KmToWalk - incubatorStatus.KmRemaining) * 100) / 100;
         this.addNotification("Incubator", {
             body: `${km} of ${incubatorStatus.KmToWalk}km`,
-            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/0.png`
+            icon: `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png`
         });
     }
     public addHumanWalkSnipeStart = (startEvent: IHumanWalkSnipeStartEvent): void => {

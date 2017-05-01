@@ -82,7 +82,7 @@ class AudioNotificationController implements INotificationController {
     public addHumanWalkSnipeStart = (startEvent: IHumanWalkSnipeStartEvent): void => {
     }
     private addNotification = (audioName: string) => {
-        this.config.container.src = "audio/" + audioName + ".mp3";
+        this.config.container.src = "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/audio/" + audioName + ".mp3";
         try {
             this.config.container.play();
         }catch (error) {

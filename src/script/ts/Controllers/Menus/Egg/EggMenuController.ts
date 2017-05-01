@@ -25,7 +25,7 @@ class EggMenuController implements IEggMenuController {
 			const progress = kmWalked / eggKm;
 			const html = `
 <div class="egg incubated-egg">
-    <div class="incubator"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/${incubator.ItemId}.png"/></div>
+    <div class="incubator"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/${incubator.ItemId}.png"/></div>
     <p> <b> ${kmWalkedRounded} </b> / <i> ${eggKmRounded} </i> km</p>
     <div class="circle"></div>
 </div>`;
@@ -65,7 +65,7 @@ class EggMenuController implements IEggMenuController {
 			const eggKmRounded = egg.EggKmWalkedTarget.toFixed(1);
 			const html = `
 <div class="egg">
-    <div class="incubator"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items-icons/0.png"/></div>
+    <div class="incubator"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png"/></div>
     <p> <i> ${eggKmRounded} </i> km</p>
     <div class="circle"></div>
 </div>`;
