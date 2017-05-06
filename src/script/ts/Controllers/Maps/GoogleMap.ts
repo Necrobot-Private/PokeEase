@@ -360,7 +360,7 @@ class GoogleMap implements IMap {
             map: this.map,
             position: new google.maps.LatLng(51.5073509,-0.12775829999998223),
             icon: {
-                url: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
+                url: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
                 scaledSize: new google.maps.Size(50, 55),                
                 anchor: new google.maps.Point(25, 45)
             },
@@ -386,7 +386,7 @@ class GoogleMap implements IMap {
             map: this.map,
             position: ev.latLng,
             icon: {
-                url: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
+                url: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
                 scaledSize: new google.maps.Size(50, 55),
                 anchor: new google.maps.Point(25, 45)
             },
@@ -685,7 +685,7 @@ class GoogleMap implements IMap {
     }
 
     private getStopIconData(status: PokeStopStatus): any {
-        let stopImage = "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/";
+        let stopImage = "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/";
 
         switch (status) {
             case PokeStopStatus.Normal: stopImage += "Normal.png"; break;
@@ -749,7 +749,7 @@ class GoogleMap implements IMap {
     }
 
     private getGymIconData(gym: IGymEvent) {
-        var stopImage = "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/";
+        var stopImage = "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/";
 
         switch (gym.OwnedByTeam) {
             case PlayerTeam.Instinct: stopImage += "instinct.png"; break;

@@ -108,38 +108,38 @@ body {
 
 #menu .item#pokemons {
     background-color: #7db620;
-    background-image: url("../images/pokemons.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/pokemons.png");
 }
 
 #menu .item#pokedex {
     background-color: #bfe358;
-    background-image: url("../images/pokedex.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/pokedex.png");
 }
 
 #menu .item#items {
     background-color: #fe7676;
-    background-image: url("../images/items.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/items.png");
 }
 
 #menu .item#eggs {
     background-color: #9b59b6;
-    background-image: url("../images/eggs.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/eggs.png");
 }
 
 #menu .item#snipes {
     background-color: #B01E00;
-    background-image: url("../images/target-white.svg");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/target-white.svg");
     background-size: cover;
 }
 
 #menu .item#settings {
     background-color: $toggle-color;
-    background-image: url("../images/settings.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/settings.png");
 }
 
 #menu .item#bot-config {
     background-color: darken($toggle-color, 30%);
-    background-image: url("../images/settings.png");
+    background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/settings.png");
 }
 
 #menu .close-button {
@@ -823,12 +823,12 @@ $event-incubator-status-color: #e9e1b5;
     transition: 0.3s;
     position: relative;
     .distance {
-        background-image: url('../images/distance.svg');
+        background-image: url('https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/distance.svg');
         background-repeat: no-repeat;
         background-position: 35px;
     }
     .timer {
-        background-image: url('../images/clock.svg');
+        background-image: url('https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/clock.svg');
         background-repeat: no-repeat;
         background-position: 35px;
     }
@@ -837,7 +837,7 @@ $event-incubator-status-color: #e9e1b5;
         top: 33px;
         left: 33px;
         display: none;
-        background-image: url('../images/target.svg');
+        background-image: url('https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/target.svg');
         background-repeat: no-repeat;
         width: 120px;
         height: 120px;
@@ -845,7 +845,7 @@ $event-incubator-status-color: #e9e1b5;
         opacity: 0.8;
     }
     .delete {
-        background-image: url('../images/delete.svg');
+        background-image: url('https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/delete.svg');
         background-repeat: no-repeat;
         width: 26px;
         height: 26px;
@@ -1582,7 +1582,7 @@ $event-incubator-status-color: #e9e1b5;
                 }
                 .number {}
                 .recycle {
-                    background: url('../images/recycle.svg');
+                    background: url('https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/recycle.svg');
                     width: 20px;
                     height: 20px;
                     display: inline-block;
@@ -1629,7 +1629,7 @@ $event-incubator-status-color: #e9e1b5;
         }
     }
     .egg .incubator {
-        background-image: url("../images/items/0.png");
+        background-image: url("https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png");
         background-size: 16%;
         background-position: 50% 49%;
         background-repeat: no-repeat;

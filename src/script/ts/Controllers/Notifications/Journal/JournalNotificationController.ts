@@ -66,7 +66,7 @@ class JournalNotificationController implements INotificationController {
         _.each(fortUsed.ItemsList, item => {
             const itemId = StaticData.itemIds[item.Name];
             const itemName = this.config.translationController.translation.itemNames[itemId];
-            itemsHtml += `<div class="item" title="${itemName}"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/${itemId}.png"/>x${item.Count}</div>`;
+            itemsHtml += `<div class="item" title="${itemName}"><img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/${itemId}.png"/>x${item.Count}</div>`;
         });
 
         const html = `<div class="info">
@@ -94,14 +94,14 @@ Gems            <span class="xp"> ${fortUsed.Gems} </span><br/>
         const roundedPerfection = Math.round(pokemonCatch.Perfection * 100) / 100;
         const eventType = pokemonCatch.IsSnipe ? "snipe" : "catch";
         const html = `<div class="image">
-                            <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCatch.Id}.png"/>
+                            <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCatch.Id}.png"/>
                         </div>
                         <div class="info">
                             ${pokemonName}
                             <div class="stats">CP ${pokemonCatch.Cp} | Lvl ${pokemonCatch.Level} | IV ${roundedPerfection}%</div>
                         </div>`;
         let itemsHtml = "";
-        _.each(itemsUsedForCapture, i => itemsHtml += `<img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/${i}.png">`);
+        _.each(itemsUsedForCapture, i => itemsHtml += `<img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/${i}.png">`);
         const extendedInfoHtml = `
 Used            <span class="attempts">${itemsHtml}</span><br/>
 Attempts        <span class="attempts">${pokemonCatches.length}</span><br/>
@@ -124,7 +124,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         const pokemonName = this.config.translationController.translation.pokemonNames[pokemonEvolve.Id];
 
         const html = `<div class="image">
-                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonEvolve.Id}.png"/>
+                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonEvolve.Id}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}
@@ -142,7 +142,7 @@ CP              <span class="cp"> ${pokemonCatch.Cp} </span>/<span class="max-cp
         const roundedPerfection = Math.round(eggHatched.Perfection * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${eggHatched.PokemonId}.png"/>
+                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${eggHatched.PokemonId}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}
@@ -163,7 +163,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         const km = Math.round((incubatorStatus.KmToWalk - incubatorStatus.KmRemaining) * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png"/>
+                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png"/>
                       </div>
                       <div class="info">Egg
                           <div class="stats">${km} of ${incubatorStatus.KmToWalk}km</div>
@@ -179,7 +179,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         const itemName = this.config.translationController.translation.itemNames[itemRecycle.Id];
 
         const html = `<div class="info" title="${itemName}">
-                          <div class="item"><img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/items/${itemRecycle.Id}.png"/>x${itemRecycle.Count}</div>
+                          <div class="item"><img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/${itemRecycle.Id}.png"/>x${itemRecycle.Count}</div>
                           <div class="stats">+${itemRecycle.Count} free space</div>
                       </div>`;
 
@@ -203,7 +203,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         const roundedPerfection = Math.round(pokemonTransfer.Perfection * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonTransfer.PokemonId}.png"/>
+                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonTransfer.PokemonId}.png"/>
                       </div>
                       <div class="info">
                           ${pokemonName}

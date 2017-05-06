@@ -32,7 +32,7 @@
         this.playerPath.addTo(this.map);
         this.playerMarker = L.marker([0, 0], {
             icon: new L.Icon({
-                iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
+                iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/location.png",
                 iconSize: [50, 55],
                 iconAnchor: [25, 45]
             })
@@ -41,37 +41,37 @@
 
         this.pokeStopIcons = [];
         this.pokeStopIcons[PokeStopStatus.Normal] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Normal.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Normal.png",
             iconSize: [48,48]
         });
         this.pokeStopIcons[PokeStopStatus.Visited] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Visited.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Visited.png",
             iconSize: [48, 48]
         });
         this.pokeStopIcons[PokeStopStatus.Lure] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Lured.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/Lured.png",
             iconSize: [48, 48]
         });
         this.pokeStopIcons[PokeStopStatus.VisitedLure] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/VisitedLure.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/VisitedLure.png",
             iconSize: [48, 48]
         });
 
         this.gymIcons = [];
         this.gymIcons[PlayerTeam.Neutral] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/unoccupied.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/unoccupied.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Mystic] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/mystic.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/mystic.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Valor] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/valor.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/valor.png",
             iconSize: [48, 48]
         });
         this.gymIcons[PlayerTeam.Instinct] = new L.Icon({
-            iconUrl: "https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/instinct.png",
+            iconUrl: "https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/NecroEase/markers/instinct.png",
             iconSize: [48, 48]
         });
     }
@@ -140,7 +140,7 @@
     public onPokemonCapture(pokemonCapture: IPokemonCaptureEvent): void {
         const posArr = [pokemonCapture.Latitude, pokemonCapture.Longitude];
         const img = new Image();
-        const imgUrl = `https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCapture.Id}.png`;
+        const imgUrl = `https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemonCapture.Id}.png`;
         const maxWidth = 42;
         const maxHeight = 38;
         img.onload = () => {

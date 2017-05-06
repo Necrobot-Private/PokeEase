@@ -93,7 +93,7 @@ class PokemonMenuController implements IPokemonMenuController {
                 `<div class="pokemon" data-pokemon-unique-id="${pokemon.Id}">
     <h1 class="name">${pokemonName}</h1>
     <div class="image-container">
-        <img src="https://raw.githubusercontent.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemon.PokemonId}.png"/>
+        <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/pokemon/${pokemon.PokemonId}.png"/>
     </div>
     <h3 class="cp">${pokemon.Cp}</h3>
     <h3 class="iv">${roundedIv}</h3>
