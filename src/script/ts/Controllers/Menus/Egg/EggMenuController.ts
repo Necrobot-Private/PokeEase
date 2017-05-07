@@ -65,7 +65,7 @@ class EggMenuController implements IEggMenuController {
 			const eggKmRounded = egg.EggKmWalkedTarget.toFixed(1);
 			const html = `
 <div class="egg">
-    <div class="incubator"><img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png"/></div>
+    <div class="incubator"><img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/901.png"/></div>
     <p> <i> ${eggKmRounded} </i> km</p>
     <div class="circle"></div>
 </div>`;
