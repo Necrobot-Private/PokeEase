@@ -163,7 +163,7 @@ CP              <span class="cp"> ${eggHatched.Cp} </span>/<span class="max-cp">
         const km = Math.round((incubatorStatus.KmToWalk - incubatorStatus.KmRemaining) * 100) / 100;
 
         const html = `<div class="image">
-                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png"/>
+                          <img src="https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/901.png"/>
                       </div>
                       <div class="info">Egg
                           <div class="stats">${km} of ${incubatorStatus.KmToWalk}km</div>

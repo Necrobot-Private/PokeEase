@@ -111,7 +111,7 @@ Lvl: ${pokemonCatch.Level}`,
         const km = Math.round((incubatorStatus.KmToWalk - incubatorStatus.KmRemaining) * 100) / 100;
         this.addNotification("Incubator", {
             body: `${km} of ${incubatorStatus.KmToWalk}km`,
-            icon: `https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/0.png`
+            icon: `https://cdn.rawgit.com/Necrobot-Private/PokemonGO-Assets/master/items/901.png`
         });
     }
     public addHumanWalkSnipeStart = (startEvent: IHumanWalkSnipeStartEvent): void => {
