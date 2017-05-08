@@ -320,6 +320,9 @@ body {
     color: white;
     transform: translateZ(0);
     overflow-y: hidden;
+	.event .item {
+		font-family: 'Inconsolata', monospace;
+	}
 }
 
 #console .title {
